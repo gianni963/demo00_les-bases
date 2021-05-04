@@ -9,7 +9,9 @@ public class Duree {
     private int heures;
     private int minutes;
     private int secondes;
-    private Duree dureeAjoutee;
+    private int SubDuree;
+    private int totalSecondes;
+
 
     //gsetters
     public int getjours() {
@@ -24,6 +26,7 @@ public class Duree {
     public int getSecondes() {
         return this.secondes;
     }
+
 
 
     //setters
@@ -53,36 +56,35 @@ public class Duree {
     }
 
     public String getDuree() {
-        return System.out.println(jours + " jours - " + heures + " heures - "+ minutes + " minutes - " + secondes + " secondes");
+        return jours + " jours - " + heures + " heures - "+ minutes + " minutes - " + secondes + " secondes";
 
     }
 
     public int getTotalSeconde() {
 
-        onlySecondes = secondes;
-        totalMinutes = minutes * 60;
-        totalHeures = heures * 3600;
-        totalJours = jours * 3600 * 24;
-        totalSecondes = onlySecondes + totalMinutes + totalHeures + totalJours;
+        int onlySecondes = secondes;
+        int totalMinutes = minutes * 60;
+        int  totalHeures = heures * 3600;
+        int totalJours = jours * 3600 * 24;
+        int totalSecondes = onlySecondes + totalMinutes + totalHeures + totalJours;
 
-        return System.out.println(totalSecondes );
-
+        return totalSecondes;
 
     }
 
     public void subDuree(Duree autreDuree){
-        subDuree = totalSecondes - autreDuree.getTotalSeconde();
-        if(subDuree < 0){
-            SubDuree = 0;
-        }
-        return subDuree;
+
+        int subDuree = this.getTotalSeconde() - autreDuree.getTotalSeconde();
+        if(subDuree < 0) SubDuree = 0;
+        System.out.println("duree soustraite: " + subDuree);
 
     }
 
     public void addDuree(Duree dureeAjoutee){
-        dureeAjoutee= totalSecondes + dureeAjoutee.getTotalSeconde();
 
-        return dureeAjoutee;
+        int dureeAjouteeTotale = this.getTotalSeconde() + dureeAjoutee.getTotalSeconde();
+
+        System.out.println("duree ajoutee: " + dureeAjouteeTotale);
 
     }
 
