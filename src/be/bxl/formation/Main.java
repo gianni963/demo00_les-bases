@@ -10,8 +10,8 @@ public class Main {
     Duree duree2 = new Duree(1, 11, 4, 20);
     duree2.getTotalSeconde();
 
-    duree1.subDuree(duree2);
-    duree1.addDuree(duree2);
+    System.out.println(duree1.subDuree(duree2));
+    System.out.println(duree1.addDuree(duree2));
 
     }
 }

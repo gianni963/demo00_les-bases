@@ -9,6 +9,7 @@ public class Duree {
     private int heures;
     private int minutes;
     private int secondes;
+    private Duree dureeAjoutee;
 
     //gsetters
     public int getjours() {
@@ -74,14 +75,14 @@ public class Duree {
         if(subDuree < 0){
             SubDuree = 0;
         }
-        return System.out.println(subDuree);
+        return subDuree;
 
     }
 
     public void addDuree(Duree dureeAjoutee){
         dureeAjoutee= totalSecondes + dureeAjoutee.getTotalSeconde();
 
-        return System.out.println(dureeAjoutee);
+        return dureeAjoutee;
 
     }
 
